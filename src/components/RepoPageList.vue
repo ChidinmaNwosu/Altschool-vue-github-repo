@@ -64,7 +64,7 @@ const filteredRepos = computed(() => {
       v-model="search"
       type="text"
       placeholder="Search repositories..."
-      class="my-4 mx-32 border-2 rounded-md focus:outline-none border-green-300 p-2 w-[50%]"
+      class="my-4 mx-20 border-2 rounded-md focus:outline-none border-green-300 p-2 w-[50%]"
     />
   </div>
   <!--To give my repo page a spinner when it is still loading-->
@@ -74,8 +74,8 @@ const filteredRepos = computed(() => {
     </div>
   </div>
 
-  <div v-else class="flex flex-col mx-auto items-center w-[80%] h-full border-2 mt-10 bg-slate-200 font-light">
-    <div class="h-[50%] w-[50%] bg-white border-8 border-green-300 mt-10 mb-10 py-5 px-5 break-words" v-for="repo in filteredRepos" :key="repo.id">
+  <div v-else class="flex flex-col mx-4 items-center w-full h-full border-2 mt-10 bg-slate-200 font-light sm:mx-auto sm:w-[60%]">
+    <div class="h-[70%] w-[60%] bg-white border-8 border-green-300 mt-10 mb-10 py-5 px-5 break-words" v-for="repo in filteredRepos" :key="repo.id">
       <RouterLink :to="`/repopage/${repo.name}`" class="py-3 font-bold hover:underline">{{repo.name}}</RouterLink>
       <p class="">language: {{ repo.language }}</p>
       <p class="mt-2">Date & Time: {{ repo.created_at }}</p>

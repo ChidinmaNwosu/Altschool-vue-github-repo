@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-[70%] w-[30%] border-8 rounded-lg border-green-100 mx-auto mt-40 font-light">
+  <div class="h-[50%] w-[80%] border-8 rounded-lg border-green-100 mx-auto mt-40 font-light sm:w-[30%]">
     <div :key="singleRepo.id" class="flex flex-col p-4 gap-3">
       <h2 class="font-bold">{{ singleRepo.name }}</h2>
 
